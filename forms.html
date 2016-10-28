@@ -2,51 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Forms</title>
+    <title>Title</title>
 </head>
 <body>
-<form action="" method="post">
-    <input type="hidden" name="hidden field" value="42">
-    This is a form containing various fields (with some initial
-    values (defaults) set, so that you can see how input text looks
-    like without actually typing it):</div>
-    <div><label for="but">Button:
-        <button id="but" type="submit" name="foo" value="bar">A cool<br>button</button></label></div>
-    <div><label for="f0">Reset button:
-        <input id="f0" type="reset" name="reset" value="Reset"></label></div>
-    <div><label for="f1">Single-line text input field: <input id="f1" name="text" size="20" value="Default text."></label></div>
-    <div><label for="f2">Multi-line text input field (textarea):</label><br>
-        <textarea id="f2" name="textarea" rows="2" cols="20">
-Default text.
-</textarea></div>
-    <div>The following two radio buttons are inside
-        a <code>fieldset</code> element with a <code>legend</code>:</div>
-    <fieldset>
-        <legend>Legend</legend>
-        <div><label for="f3"><input id="f3" type="radio" name="radio" value="1"> Radio button 1</label></div>
-        <div><label for="f4"><input id="f4" type="radio" name="radio" value="2" checked> Radio button 2 (initially checked)</label></div>
-    </fieldset>
-    <fieldset>
-        <legend>Check those that apply</legend>
-        <div><label for="f5"><input id="f5" type="checkbox" name="checkbox"> Checkbox 1</label></div>
-        <div><label for="f6"><input id="f6" type="checkbox" name="checkbox2" checked> Checkbox 2 (initially checked)</label></div>
-    </fieldset>
-    <div><label for="f10">A <code>select</code> element with <code>size="1"</code>
-        (dropdown box):
-        <select id="f10" name="select1" size="1">
-            <option>one
-            <option selected>two (default)
-            <option>three
-        </select></label></div>
-    <div><label for="f11">A <code>select</code> element with <code>size="3"</code>
-        (listbox):</label><br>
-        <select id="f11" name="select2" size="3" multiple>
-            <option>one
-            <option selected>two (default)
-            <option>three
-        </select></div>
-    <div><label for="f99">Submit button:
-        <input id="f99" type="submit" name="submit" value="Just a test"></label></div>
+<form method="POST" action="http://requestb.in/v26fb0v2">
+    <!--<label for="asd">Search term</label>-->
+    <!--&lt;!&ndash;This is a comment&ndash;&gt;-->
+    <!--&lt;!&ndash;comment&ndash;&gt;-->
+    <!--<input type="hidden" name="secret" value="mysecret" >-->
+    <!--<input type="password" name="password" placeholder="Your password">-->
+    <!--<input type="checkbox">-->
+    <!--<label for="radio">Choice</label>-->
+    <!--<input id="radio" type="radio">-->
+    <!--<br>-->
+    <!--<textarea name="bigtext" rows="10" cols="10"></textarea>-->
+    <!--<br>-->
+
+    <input type="checkbox" id="red" value="red" name="color[]" checked>
+    <label for="red">Red</label>
+    <br>
+    <input type="checkbox" id="blue" value="blue" name="color[]">
+    <label for="blue">Blue</label>
+    <br>
+    <input type="checkbox" id="green" value="green" name="color[]">
+    <label for="green">green</label>
+    <br>
+    <h1>Radios</h1>
+    <p>What is the capital of Texas?</p>
+    <label>
+        <input type="radio" name="cities" value="houston">
+        Houston
+    </label>
+    <label>
+        <input type="radio" name="cities" value="dallas">
+        Dallas
+    </label>
+    <label>
+        <input type="radio" name="cities" value="austin">
+        Austin
+    </label>
+    <label>
+        <input type="radio" name="cities" value="san antonio">
+        San Antonio
+    </label>
+    <h1>select</h1>
+    <label for="states">List</label>
+    <select name="states" id="states">
+        <option value="TX">Texas</option>
+        <option value="CA">California</option>
+        <option value="ND">North Dakota</option>
+    </select>
+    <input type="submit">
 </form>
 </body>
 </html>

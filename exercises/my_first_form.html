@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My First HTML form</title>
+</head>
+<body>
+
+<h1>User Login</h1>
+<form method="POST" action="http://requestb.in/v26fb0v2">
+    <p>
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" placeholder="Your Username">
+    </p>
+    <p>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" placeholder="Your password">
+    </p>
+    <p>
+        <button name="login">Login</button>
+    </p>
+</form>
+
+<h1>Compose an email</h1>
+<form method="GET" action="http://requestb.in/v26fb0v2">
+    <label for="from">From</label>
+    <input type="text" name="from" id="from">
+    <br>
+    <label for="to">To</label>
+    <input type="text" name="to" id="to">
+    <br>
+    <label for="subject">Subject</label>
+    <input type="text" name="subject" id="subject">
+    <br>
+    <label for="body">Message</label>
+    <br>
+    <textarea name="from" id="body" rows="5" cols="30"></textarea>
+    <br>
+    <button name="send">Send</button>
+</form>
+
+
+</body>
+</html>

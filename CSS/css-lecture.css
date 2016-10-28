@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Coiny');
+
+body{
+    /*background-color: antiquewhite;*/
+    background-image: url('../IMG/seigaiha.png');
+}
+h1{
+    color: aqua;
+    font-family: 'Coiny', cursive;
+
+}
+#firstp{
+    font-size: larger;
+}
+#firstp{
+    color:blue;
+}
+.red-group{
+    color:red;
+}
+.bold{
+    font-weight: 100;
+}
+/*h1, .red-group{*/
+    /*color:violet;*/
+/*}*/
+p{
+    font-family: 'Coiny';
+    font-size: 1em;
+    /*font-weight: bolder;*/
+    /*font-style: cursive;*/
+}
+
+a:link {
+    color:red;
+}
+
+/* visited link (:visited) */
+a:visited {
+    color:yellow;
+}
+
+/* mouse hover over link (:hover) */
+a:hover {
+    color:violet;
+}
+
+/* active/selected link (:active) */
+a:active {
+    color:green;
+}
+
+ol {
+    list-style: upper-alpha;
+}
+#content{
+    width: 500px;
+    height: 400px;
+    background-color: crimson;
+}
