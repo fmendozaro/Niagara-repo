@@ -7,12 +7,18 @@
 <body>
 <script>
     "use restrict";
-    var rnd = 0;
+    var rnd;
     while(true){
         rnd = Math.floor((Math.random()*50)+1);
         if(rnd % 2){
-
+            console.log("Here is an odd number: "+ rnd);
+            break;
+        }else{
+            console.log("Yikes! Skipping number: "+ rnd);
+            continue;
         }
+
+
     }
 </script>
 </body>
