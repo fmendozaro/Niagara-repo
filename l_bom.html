@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<script>
+    (function(){
+        'use strict';
+
+        //it's a good idea to have this vars at the top in order to edit them easily.
+
+        var count = 0;
+        var interval = 500; // Ms
+        var max = 10;
+
+        var condition = function () {
+            if(max <= count){
+                document.write("<h1>Cake is ready </h1><br>");
+                document.write("<img width='150px' height='150px' src='img/cake.gif'>");
+                console.log("Cake is ready <br>");
+                clearInterval(bakeInt);
+            }else{
+                document.write("Hold on "+max+" more seconds <br>");
+                max--;
+
+
+            }
+
+        };
+
+        //create the interval with the function
+        var bakeInt = setInterval(condition, interval);
+
+
+        // setTimeout example
+
+        var delay = max * interval;
+
+        var timeoutId =  setTimeout(function(){
+            console.log("Time is up, i will redirect");
+            //if the time' up then i redirect.
+            //window.location = "http://kitco.com";
+            //location.reload();
+        }, delay);
+
+        console.log("This is the last thing i read but the first thing to be executed ");
+
+    })();
+</script>
+</body>
+</html>

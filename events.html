@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My events</title>
+</head>
+<body>
+<input type="text" id="text">
+<button id="btn1" class="event-btns">Click Me!</button>
+<button id="btn2" class="event-btns">Remove event listener</button>
+
+
+<form action="#" name="myform">
+    <label for="firstName">First Name</label>
+    <input  id="firstName" type="text" name="firstName">
+    <input id="submit-btn" type="submit" value="Submit">
+</form>
+
+<script>
+    'use strict';
+
+    // create a handler function
+    var listener = function (event) {
+        alert('You clicked the button!');
+    };
+
+
+    // register the listener to handle clicks on btn1
+    var btn = document.getElementById('btn1');
+    //btn.addEventListener('click', listener);
+
+
+    var btns = document.getElementsByClassName("event-btns");
+
+    // Adds an event listener to the first btn
+    btns[0].addEventListener('click', listener);
+
+    //Removes the event listener from the first btn
+    btns[1].addEventListener('click', function (event) {
+        btns[0].removeEventListener('click', listener);
+    });
+
+    var el = document.body;
+
+    el.onkeyup = function(evt) {
+        //console.log(evt);
+            var input = document.getElementById("text");
+            var val = input.value;
+            val = val.toUpperCase();
+            input.value = val;
+            //console.log("keyup: " + evt.keyCode);
+            //console.log("F key was pressed");
+
+
+    };
+
+    var form = document.forms.myform;
+
+    form.addEventListener('submit', function (event) {
+        console.log("My form was submitted");
+    });
+
+</script>
+</body>
+</html>
