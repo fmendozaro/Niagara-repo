@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../vendor/dhtmlxLayout/codebase/custom-dhtmlx.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <style>
+        #layoutObj{
+            height: 100vh;
+            width: 100%;
+        }
+    </style>
+</head>
+<body onload="loadLayout()">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12" id="layoutObj"></div>
+    </div>
+</div>
+
+<div id="formContent">
+    <form>
+        <textarea cols='20' rows='20'>Fer</textarea>
+    </form>
+</div>
+
+</body>
+<script src="../vendor/dhtmlxLayout/codebase/dhtmlxlayout.js"></script>
+<script>
+
+    var myLayout;
+    var pattern = "3L";
+
+    function loadLayout(){
+
+        if (myLayout) {
+            myLayout.unload()
+        }
+
+        var width = window.innerWidth;
+
+        if (width < 600) {
+            pattern = "3E"
+        } else {
+            pattern = "3L"
+        }
+
+        myLayout = new dhtmlXLayoutObject({
+            parent: document.getElementById("layoutObj"),  // parent container
+            pattern: pattern           // layout's pattern
+        });
+
+        myLayout.cells("a").setWidth(200);
+        myLayout.cells("c").attachObject("formContent");
+    }
+
+    window.onresize = loadLayout;
+
+</script>
+</html>

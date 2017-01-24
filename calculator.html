@@ -6,32 +6,37 @@
 </head>
 <body>
 
+<p id="msg"></p>
 <input type="text" id="left">
 <br>
 <button id="btn1" class="btn">1</button>
 <button id="btn2" class="btn">2</button>
 <button id="btn3" class="btn">3</button>
 
+
 <script>
     (function(){
         console.log("For a lecture");
         var btnPressed = function(){
             console.log(this.innerHTML);
+            msg.innerHTML = "Howdy!";
+            msg.style.display = "block";
         };
 
         //this for something
         var btn1 = document.getElementById("btn1");
         var btn2 = document.getElementById("btn2");
         var btn3 = document.getElementById("btn3");
+        var msg = document.getElementById("msg");
 
-        var buttons = document.getElementsByClassName("btn");
+//        var buttons = document.getElementsByClassName("btn");
 
-//        btn1.addEventListener("click", btnPressed);
-//        btn2.addEventListener("click", btnPressed);
-//        btn3.addEventListener("click", btnPressed);
-        console.log(buttons);
-
-        buttons.addEventListener("click", btnPressed);
+        btn1.addEventListener("click", btnPressed);
+        btn2.addEventListener("click", btnPressed);
+        btn3.addEventListener("click", btnPressed);
+//        console.log(buttons);
+//
+//        buttons.addEventListener("click", btnPressed);
 
     })();
 </script>
