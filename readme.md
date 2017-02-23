@@ -1,9 +1,11 @@
-Web Exersices for Codeups Cohorts
+Web Exercises for Codeup's lectures
 ====================
 ### Includes:
 
 - HTML5
 - CSS
-- JS 
+- Javascript
 - jQuery
 - DHTMLX
+ 
+ 
